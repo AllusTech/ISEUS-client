@@ -4,7 +4,7 @@ import Nav from './comp/Nav';
 
 type Props = {};
 
-const Landing = (props: Props) => {
+const Landing: React.FC = (props: Props) => {
   return (
     <>
       <Nav />
