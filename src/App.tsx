@@ -1,5 +1,5 @@
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
-
+import { ChakraProvider } from '@chakra-ui/react';
 //page import
 
 import LandingLayout from './layouts/Landing/Landing';
@@ -28,7 +28,11 @@ const router = createBrowserRouter([
 ]);
 
 const App = (props: Props) => {
-  return <RouterProvider router={router} />;
+  return (
+    <ChakraProvider>
+      <RouterProvider router={router} />
+    </ChakraProvider>
+  );
 };
 
 export default App;
