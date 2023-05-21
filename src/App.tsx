@@ -9,6 +9,7 @@ import AboutUsPage from './pages/Landing/aboutus/AboutUs';
 import ContactUsPage from './pages/Landing/contactUs/ContactUs';
 import NewsPage from './pages/Landing/news/news';
 import BugReportPage from './pages/Landing/bugReports/BugReports';
+import Auth from './pages/Landing/Auth/Auth';
 
 type Props = {};
 
@@ -23,6 +24,7 @@ const router = createBrowserRouter([
       { path: 'kontakt', element: <ContactUsPage /> },
       { path: 'novosti', element: <NewsPage /> },
       { path: 'prijavagresaka', element: <BugReportPage /> },
+      { path: 'prijava', children: [{ index: true, element: <Auth /> }, { path: 'registracija' }] },
     ],
   },
 ]);
