@@ -1,7 +1,14 @@
 import { Flex, Box, FormControl, FormLabel, Input, Checkbox, Stack, Link, Button, Heading, Text, useColorModeValue, Center } from '@chakra-ui/react';
 import { FcGoogle } from 'react-icons/fc';
+import { useNavigate } from 'react-router-dom';
 
 export default function SimpleCard() {
+  const navigate = useNavigate();
+
+  const professorsHandler = () => {
+    navigate('/professors')
+  }
+
   return (
     <Flex minH={'100vh'} align={'flex-start'} justify={'center'} bg={useColorModeValue('gray.50', 'gray.800')}>
       <Stack spacing={8} mx={'auto'} maxW={'lg'} py={12} px={6}>
@@ -26,7 +33,7 @@ export default function SimpleCard() {
                 <Checkbox>Zapamti me</Checkbox>
                 <Link color={'blue.400'}>Zaboravljena šifra?</Link>
               </Stack>
-              <Button
+              <Button onClick={professorsHandler}
                 bg={'blue.400'}
                 color={'white'}
                 _hover={{
