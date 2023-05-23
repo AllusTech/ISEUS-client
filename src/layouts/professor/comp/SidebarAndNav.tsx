@@ -1,4 +1,4 @@
-import React, { ReactNode } from 'react';
+import { ReactNode } from 'react';
 import {
   IconButton,
   Avatar,
@@ -7,7 +7,6 @@ import {
   Flex,
   HStack,
   VStack,
-  Icon,
   useColorModeValue,
   Link,
   Drawer,
@@ -29,7 +28,6 @@ import {
   FiBell,
   FiChevronDown,
 } from 'react-icons/fi';
-import { IconType } from 'react-icons';
 import { ReactText } from 'react';
 import {  MoonIcon, SunIcon } from '@chakra-ui/icons';
 

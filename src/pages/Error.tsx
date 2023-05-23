@@ -1,9 +1,37 @@
-import React from 'react';
+import { Box, Heading, Text, Button } from '@chakra-ui/react';
+import { useNavigate } from 'react-router-dom';
 
-type Props = {};
+export default function NotFound() {
+  const navigate = useNavigate();
 
-const Error = (props: Props) => {
-  return <div>Error</div>;
-};
+  const navigateHandler = () => {
+    navigate('/')
+  }
 
-export default Error;
+  return (
+    <Box textAlign="center" py={10} px={6}>
+      <Heading
+        display="inline-block"
+        as="h2"
+        size="2xl"
+        bgGradient="linear(to-r, teal.400, teal.600)"
+        backgroundClip="text">
+        404
+      </Heading>
+      <Text fontSize="18px" mt={3} mb={2}>
+        Nepostojeća stranica
+      </Text>
+      <Text color={'gray.500'} mb={6}>
+        Stranica koju želite posjetiti izgleda da ne postoji.
+      </Text>
+
+      <Button onClick={navigateHandler}
+        colorScheme="teal"
+        bgGradient="linear(to-r, teal.400, teal.500, teal.600)"
+        color="white"
+        variant="solid">
+        Početna Strana
+      </Button>
+    </Box>
+  );
+}
