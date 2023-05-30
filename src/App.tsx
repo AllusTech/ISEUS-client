@@ -1,7 +1,6 @@
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import { ChakraProvider } from '@chakra-ui/react';
 
-
 //page import
 //layouts
 import LandingLayout from './layouts/Landing/Landing';
@@ -33,13 +32,19 @@ const router = createBrowserRouter([
       { path: 'prijavagresaka', element: <BugReportPage /> },
       { path: 'prijava', children: [{ index: true, element: <Auth /> }, { path: 'registracija' }] },
     ],
-  }, {
+  },
+  {
     path: 'professors/',
     element: <ProfessorsLayout />,
     children: [
-      {index: true, element: <ProfessorsPage/>}
-    ]
+      { index: true, element: <ProfessorsPage /> },
+      { path: 'predavanja', element: '' },
+      { path: 'vjezbe', element: '' },
+      { path: 'ispiti', element: '' },
+      { path: 'studenti', element: '' },
+    ],
   },
+  { path: 'studenti/', element: '', children: [{ index: true, element: '' }, { path: '' }] },
 ]);
 
 const App = (props: Props) => {
