@@ -24,11 +24,12 @@ export default function SplitScreen() {
             </Text>
             <br />{' '}
             <Text fontSize={{ base: '3xl' }} color={'blue.400'} as={'span'}>
-              Informacioni sistem za fakultete
+              Univerzitetski informacioni sistem
             </Text>{' '}
           </Heading>
           <Text fontSize={{ base: 'md', lg: 'lg' }} color={'gray.500'}>
-            Savremen i moderan informacioni sistem za evidenciju uspjeha studenata po predmetima
+            Savremeni i moderni informacioni sistem za automatizovanu evidenciju uspjeha i prisustva
+            studenata po predmetima.
           </Text>
           <Stack direction={{ base: 'column', md: 'row' }} spacing={4}>
             <Button

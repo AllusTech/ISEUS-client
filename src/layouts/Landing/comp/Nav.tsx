@@ -1,4 +1,4 @@
-import { Link as NavLink, useNavigate } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 import {
   Box,
   Flex,
@@ -57,6 +57,8 @@ export default function Nav() {
             textAlign={useBreakpointValue({ base: 'center', md: 'left' })}
             fontFamily={'heading'}
             color={useColorModeValue('gray.800', 'white')}
+            as={NavLink}
+            to={'/'}
           >
             ISEUS
           </Text>
@@ -110,7 +112,7 @@ const DesktopNav = () => {
             <PopoverTrigger>
               <Link
                 as={NavLink}
-                p={2}
+                m={2}
                 to={navItem.href}
                 fontSize={'sm'}
                 fontWeight={500}
@@ -119,7 +121,7 @@ const DesktopNav = () => {
                   textDecoration: 'none',
                   color: linkHoverColor,
                 }}
-                _activeLink={{ textDecoration: 'underline', fontWeight: 'bold' }}
+                _activeLink={{ borderBottom: '2px solid white', paddingBottom: '1px' }}
               >
                 {navItem.label}
               </Link>
