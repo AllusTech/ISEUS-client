@@ -7,7 +7,7 @@ import {
   useColorModeValue,
   VisuallyHidden,
 } from '@chakra-ui/react';
-import { FaInstagram, FaTwitter, FaYoutube } from 'react-icons/fa';
+import { FaFacebook, FaGithub, FaInstagram, FaTwitter, FaYoutube } from 'react-icons/fa';
 import { ReactNode } from 'react';
 
 const SocialButton = ({
@@ -34,7 +34,8 @@ const SocialButton = ({
       transition={'background 0.3s ease'}
       _hover={{
         bg: useColorModeValue('blackAlpha.200', 'whiteAlpha.200'),
-      }}>
+      }}
+    >
       <VisuallyHidden>{label}</VisuallyHidden>
       {children}
     </chakra.button>
@@ -44,8 +45,12 @@ const SocialButton = ({
 export default function SmallWithSocial() {
   return (
     <Box
+      position='fixed'
+      bottom={0}
       bg={useColorModeValue('gray.50', 'gray.900')}
-      color={useColorModeValue('gray.700', 'gray.200')}>
+      color={useColorModeValue('gray.700', 'gray.200')}
+      w='full'
+    >
       <Container
         as={Stack}
         maxW={'6xl'}
@@ -53,17 +58,18 @@ export default function SmallWithSocial() {
         direction={{ base: 'column', md: 'row' }}
         spacing={4}
         justify={{ base: 'center', md: 'space-between' }}
-        align={{ base: 'center', md: 'center' }}>
-        <Text>© 2022 ISEUS. Sva prava zadržana</Text>
+        align={{ base: 'center', md: 'center' }}
+      >
+        <Text>2023 © ISEUS. Sva prava zadržana</Text>
         <Stack direction={'row'} spacing={6}>
-          <SocialButton label={'Twitter'} href={'#'}>
-            <FaTwitter />
+          <SocialButton label={'Facebook'} href={'#'}>
+            <FaFacebook />
           </SocialButton>
           <SocialButton label={'YouTube'} href={'#'}>
             <FaYoutube />
           </SocialButton>
-          <SocialButton label={'Instagram'} href={'#'}>
-            <FaInstagram />
+          <SocialButton label={'Github'} href={'#'}>
+            <FaGithub />
           </SocialButton>
         </Stack>
       </Container>
