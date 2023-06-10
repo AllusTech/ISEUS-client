@@ -25,7 +25,7 @@ export default function SimpleCard() {
 
   return (
     <Flex
-      minH={'90vh'}
+      minH={'84vh'}
       align={'flex-start'}
       justify={'center'}
       bg={useColorModeValue('gray.50', 'gray.800')}
